@@ -1,0 +1,40 @@
+<mvc:View controllerName="sync4.zfc1680.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Table items="{/esClassSet}">
+                <columns>
+                    <Column><header><Text text="Class ID" /></header></Column>
+                    <Column><header><Text text="Class Name" /></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem press="onClick" type="Active">
+                        <cells>
+                            <Text text="{Class}" />
+                            <Text text="{Cname}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+
+
+            <Table id="idTabConn" items="{/esStdSet}">
+                <columns>
+                    <Column><header><Text text="Class ID" /></header></Column>
+                    <Column><header><Text text="Student No" /></header></Column>
+                    <Column><header><Text text="Student Name" /></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{Stcla}" />
+                            <Text text="{Stdno}" />
+                            <Text text="{Sname}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

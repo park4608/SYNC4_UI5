@@ -1,0 +1,21 @@
+<mvc:View controllerName="sync4.zfc1642.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List items='{/classList}'itemPress="onPress">
+                <items>
+                    <StandardListItem type="Active" title="{class}" description="{cName}"/>
+                </items>
+            </List>
+
+            <ComboBox id="comboStd" items="{stdList}">
+                <items>
+                    <core:Item  key="{stdNo}" text="{sName}" />
+                </items>
+            </ComboBox>
+        </content>
+    </Page>
+</mvc:View>

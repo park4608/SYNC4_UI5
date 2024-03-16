@@ -1,0 +1,64 @@
+<mvc:View
+    controllerName="sync4.zfc1620.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <!-- Condition -->
+            <Panel expandable="true" expanded="true">
+                <Toolbar>
+                    <content>
+                        <Title text="Condition" />
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://search" press="onSearch" />
+                    </content>
+                </Toolbar>
+                <content>
+                    <l:VerticalLayout>
+                        <l:HorizontalLayout>
+                            <Label text="Airline" />
+                            <Input id="inpCarrid" value="AA"  width="50%"/>
+                        </l:HorizontalLayout>
+                        <l:HorizontalLayout>
+                            <Label text="Conn No" />
+                            <Input id="inpConnid" value="17" width="50%"/>
+                        </l:HorizontalLayout>
+                    </l:VerticalLayout>
+                </content>
+            </Panel>
+            <!-- Flight Form -->
+            <f:SimpleForm>
+                <f:title><core:Title text="Flight Info"/></f:title>
+                <f:content>
+                    <!-- Airline Container -->
+                    <core:Title text="Airline Info" />
+                    <Label text="Airline" />
+                        <Input value="AA" editable="false" />
+                        <Text text="American Airline" />
+                    <Label text="Currency" />
+                        <Input value="USD" editable="false" />
+                    <!-- Flight Container -->
+                    <core:Title text="Flight Schedule" />
+                    <Label text="Flight Number" />
+                        <Input value="17" editable="false" />
+                    <Label text="City" />
+                        <Input value="NEW YORK" editable="false" />
+                        <Text text="~" />
+                        <Input value="SAN FRANCISCO" editable="false" />
+                    <Label text="Airport" />
+                        <Input value="JFK" editable="false" />
+                        <Text text="~" />
+                        <Input value="SFO" editable="false" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="sync4.zfc1621.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Input id="inpCarrid" description="Enter Airline" />
+            <Button text="Main View" press="onMain" />
+            <core:Fragment
+                id="idFrag"
+                fragmentName="sync4.zfc1621.view.infoFrag"
+                type="XML"
+            />
+        </content>
+    </Page>
+</mvc:View>

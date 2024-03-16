@@ -1,0 +1,29 @@
+<mvc:View controllerName="sync4.zfc1690.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Label text="Location" />
+            <Input id="locInput" value="11" />
+            <Button text="Search" press="onSearch"/>
+            <Table id="classTable" items="{/esClassSet}">
+                <columns>
+                    <Column><header><Text text="Class" /></header></Column>
+                    <Column><header><Text text="Class Name" /></header></Column>
+                    <Column><header><Text text="Location" /></header></Column>
+                    <Column><header><Text text="Location Text" /></header></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{Clscd}" />
+                            <Text text="{Clsnm}" />
+                            <Text text="{Region}" />
+                            <Text text="{RegionT}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

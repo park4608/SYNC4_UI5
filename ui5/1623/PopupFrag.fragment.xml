@@ -1,0 +1,45 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+>
+    <Dialog id="popupDialog" title="Airport Info">
+        <Panel>
+            <Toolbar>
+                <content>
+                    <Title text="Airport Info" />
+                    <ToolbarSpacer />
+                    <Button icon="sap-icon://decline" press="onClose" />
+                </content>
+            </Toolbar>
+            <content>
+                <l:VerticalLayout>
+                    <l:HorizontalLayout>
+                        <Label text="Departure" />
+                            <Input value="JFK" editable="false"/>
+                            <Text text="New York JF Kennedy, USA" />
+                    </l:HorizontalLayout>
+                    <l:HorizontalLayout>
+                        <Label text="Arrival" />
+                            <Input value="SFO" editable="false"/>
+                            <Text text="San Francisco Int Apt.USA" />
+                    </l:HorizontalLayout>
+                </l:VerticalLayout>
+            </content>
+        </Panel>
+        <!-- <Title text="Airport Detail Info" />
+        <Button text="x" press="onClose" />
+        <l:VerticalLayout>
+            <l:HorizontalLayout>
+                <Label text="Departure" />
+                    <Input text="JFK" />
+                    <Text text="New York JF Kennedy, USA" />
+            </l:HorizontalLayout>
+            <l:HorizontalLayout>
+                <Label text="Arrival" />
+                    <Input text="SFO" />
+                    <Text text="San Francisco Int Apt.USA" />
+            </l:HorizontalLayout>
+        </l:VerticalLayout> -->
+    </Dialog>
+</core:FragmentDefinition>

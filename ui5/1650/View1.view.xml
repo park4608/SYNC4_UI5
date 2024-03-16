@@ -1,0 +1,41 @@
+<mvc:View controllerName="sync4.zfc1650.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"   
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <ComboBox id="clsCombo" items="{/classList}" selectedKey="{/classList/0/class}">
+                <items>
+                    <core:Item key="{class}" text="{cName}" />
+                </items>
+            </ComboBox>
+            <Button text="Search" press="onSearch" />
+            <List id="stdList" items="{stdList}" itemPress="onTest">
+                <items>
+                    <StandardListItem type="Active"
+                                      title="{stdNo}"
+                                      description="{sName}"
+                                      press="onItemPress"
+                    />
+                </items>
+            </List>
+            <Panel id="infoPanel" headerText="{sName} Student Info" expandable="true" >
+                <l:VerticalLayout>
+                    <l:HorizontalLayout>
+                        <Label text="Student No"/>
+                        <Input value="{stdNo}" enabled="false" />
+                        <Text text="{sName}" />
+                    </l:HorizontalLayout>
+                    <l:HorizontalLayout>
+                        <Label text="Gender" />
+                        <Input value="{gender}" enabled="false" />
+                        <Text text="{genderKey}" />
+                    </l:HorizontalLayout>
+                </l:VerticalLayout>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
